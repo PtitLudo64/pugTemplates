@@ -1,0 +1,7 @@
+header 
+    link(rel="stylesheet", href="css/header.css")
+    h2 Logo 
+    nav 
+        ul 
+            each val in navItems 
+                li #[a(href=val.url) #{val.label}] 

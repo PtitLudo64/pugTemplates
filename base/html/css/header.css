@@ -1,0 +1,25 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: calc(100% - 2rem);
+}
+header nav ul {
+    display: flex;
+    gap: 1rem;
+}
+header nav ul li {
+    list-style: none;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+header nav ul li a:hover {
+    text-decoration: underline;
+}

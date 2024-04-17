@@ -1,0 +1,27 @@
+:root {
+    --bg-clr: #333; 
+    --txt-clr: #f1f1f1;
+}
+h1 {
+    color: #7a7;
+}
+body {
+    background: var(--bg-clr);
+    color: var(--txt-clr);
+    font-family: sans-serif;
+}
+.uName {
+    color:#55a;
+}
+main {
+    margin-top: 6rem;
+}
+#container {
+    width:80%;
+    margin:0 auto;
+    padding: 1rem;
+    border: 1px solid #f00;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+        

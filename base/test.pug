@@ -1,0 +1,45 @@
+doctype html
+html(lang="fr")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Ma page d'accueil
+        script(type='text/javascript').
+            let foo=false;
+            if (foo) {
+                console.log('foo');
+            }
+            else {
+                console.log('pas foo!');
+            }
+        link(rel="stylesheet", href="css/style.css")
+        //- style
+            //- | :root {
+            //- |   --bg-clr: #333; 
+            //- |   --txt-clr: #f1f1f1;}
+            //- | h1{color: #7a7;}
+            //- | body{background: var(--bg-clr); color: var(--txt-clr); font-family: sans-serif;}
+            //- | .uName {color:#55a;}
+            //- | #container {width:80%; margin:0 auto; padding: 1rem; border: 1px solid #f00; border-radius: 5px; font-size: 1.3rem;}
+                
+    body 
+        include includes/vars
+        include includes/header.pug
+        main
+            h1 #{homeTitle}
+
+            #container.col
+                if youAreUsingPug
+                    p You are amazing!
+                else
+                    p Get on it!
+                p.
+                    Pug is a terse and simple templating language with a
+                    strong focus on performance and powerful features.
+            h3 
+                span.uName #{user.name}
+                if user.loggedIn 
+                    span &nbsp;est déjà connecté
+                else 
+                    span &nbsp;Non connecté : 
+                        a(href="#") Connexion 
