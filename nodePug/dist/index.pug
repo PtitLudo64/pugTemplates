@@ -1,6 +1,6 @@
 doctype html
 
-html(lang="fr")
+html(lang=pass.lang)
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -17,6 +17,7 @@ html(lang="fr")
             default 
                 include ./includes/fr_texts
         
+        include includes/header
         h1 #{title}
         .container 
             h2 #{subTitle}
@@ -51,7 +52,3 @@ html(lang="fr")
         //- p Language : #{pass.lang} 
         //- p#toto
         //- h2 #{pass.title}
-        //- script 
-        //-     | const toto="Un Coucou du script JS dans PUG...";
-        //-     | const pgp=document.querySelector('#toto');
-        //-     | pgp.innerText = toto;

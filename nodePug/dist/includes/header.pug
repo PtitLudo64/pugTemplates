@@ -1,0 +1,26 @@
+style 
+    | header {display: flex; width:100%; justify-content: space-between; align-items: center; padding: 1rem; position: fixed; top:0; left: 0; background-color: #222;}
+    | header #logo {font-size: 1.5rem;}
+    | header nav,
+    | header nav ul {display: flex; gap: 1rem;}
+    | header nav ul li {list-style: none;}
+    | header nav ul li a {text-decoration: none; color: #f1f1f1;}
+    | header nav ul li a:hover {text-decoration: underline;}
+    | header nav select {font-size: 1rem;}
+header 
+    #logo Logo 
+    nav 
+        ul 
+            li 
+                a(href="#") Home 
+            li 
+                a(href="#") Documentation 
+            li 
+                a(href="#") Contact
+        select#lang(name="lang")
+            option(value="", style='color:#ccc') 🌐 Language 
+            option(value="fr") 🇫🇷 Français 
+            option(value="gb") 🇬🇧 English 
+script 
+    | const select = document.querySelector('select');
+    | select.addEventListener('change', () => {location.replace(`/?lang=${select.value}`)});

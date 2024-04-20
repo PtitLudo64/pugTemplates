@@ -3,8 +3,6 @@ const PORT = 1234;
 const path = require("path");
 const bodyParser = require("body-parser");
 
-// import { systemArchitecture } from "system-architecture";
-
 let app = express();
 
 app.set("view engine", "pug");
@@ -21,15 +19,16 @@ app.use(express.static(rootPath));
 
 router.get("/", (req, res, next) => {
   console.log(req.query, req.query.lang);
+  let lang = "fr";
   // Attend un argument après l'url de type http://localhost/?lang=fr
   if (!req.query.lang) {
-    let lang = "fr"
+    lang = "fr";
   } else { lang = req.query.lang};
 
   let system = path.resolve('./');
   const myDatas = {
     title: "Multilingual test site...",
-    msg: "This is a pargraph content",
+    msg: "This is a paragraph content",
     info: system,
     lang: lang
   };
