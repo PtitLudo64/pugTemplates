@@ -1,0 +1,37 @@
+doctype html
+
+html(lang="fr")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Pug Template Engine in Node
+        link(rel="stylesheet", href="css/index.css")
+    body
+        include includes/vars
+
+        case pass.lang 
+            when "fr"
+                include includes/fr_texts
+            when "gb"
+                include ./includes/gb_texts
+            default 
+                include ./includes/fr_texts
+        
+        h1 #{title}
+        .container 
+            h2 #{subTitle}
+            hr
+            p !{desc}
+            h3 #{exemple1}
+
+
+        //- p #{par1}
+        //- p #{pass.msg}
+        //- p Actual path : #{pass.info}
+        //- p Language : #{pass.lang} 
+        //- p#toto
+        //- h2 #{pass.title}
+        //- script 
+        //-     | const toto="Un Coucou du script JS dans PUG...";
+        //-     | const pgp=document.querySelector('#toto');
+        //-     | pgp.innerText = toto;

@@ -1,0 +1,10 @@
+{
+  "name": "test-package",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.19.2",
+    "pug": "^3.0.2",
+    "system-architecture": "^0.1.0"
+  }
+}
