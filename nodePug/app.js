@@ -28,7 +28,7 @@ router.get("/", (req, res, next) => {
 
   let system = path.resolve('./');
   const myDatas = {
-    title: "This is the title...",
+    title: "Multilingual test site...",
     msg: "This is a pargraph content",
     info: system,
     lang: lang

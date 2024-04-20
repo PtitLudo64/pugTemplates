@@ -23,7 +23,27 @@ html(lang="fr")
             hr
             p !{desc}
             h3 #{exemple1}
-
+            article 
+                p= '<!DOCTYPE html>'
+                br
+                p= '<html>'
+                p= '<head>'
+                p= '<title>Exemple</title>'
+                p= '</head>'
+                p= '<body>'
+                br
+                p(style="color: #00f")= '<?php'
+                p(style="color: #f00") 
+                    span(style="color: #070") echo 
+                    = '"Bonjour, je suis un script PHP !";'
+                p(style="color: #00f")= '?>'
+                br
+                p= '</body>'
+                p= '</html>'
+            p #{line2}
+            p #{line3}
+            p #{line4}
+            p #{line5}
 
         //- p #{par1}
         //- p #{pass.msg}

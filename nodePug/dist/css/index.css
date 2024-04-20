@@ -28,3 +28,15 @@ hr {
     border-color: #999;
     margin-bottom: 1rem;
 }
+.container article {
+    background-color: #f1f1f1;
+    color: #222;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: .9rem;
+    padding: 1rem;
+    width: 90%;
+    margin: 0 auto;
+}
+.container p {
+    margin: .5rem 0;
+}
