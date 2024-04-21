@@ -23,4 +23,4 @@ header
             option(value="gb") 🇬🇧 English 
 script 
     | const select = document.querySelector('select');
-    | select.addEventListener('change', () => {location.replace(`/?lang=${select.value}`)});
+    | select.addEventListener('change', () => {location.replace(`${location.origin}${location.pathname}?lang=${select.value}`)});    
